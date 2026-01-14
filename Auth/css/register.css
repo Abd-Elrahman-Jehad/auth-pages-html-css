@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== ==Home== ===== */
+
+body {
+  background: linear-gradient(to bottom right, #2f2f2f, #b5aa95);
+  color: #8b6940;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.8s, color 0.8s;
+}
+
+/* =====Dark mode button===== */
+
+body.dark-mode {
+  background: #282525;
+  color: #f2f2f2;
+}
+
+/* =====After for decoration===== */
+
+.card-header h2::after {
+  content: " ★";
+  color: 8b6940;
+  font-size: 18px;
+}
+
+.dark-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #8b6940;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.dark-toggle:hover {
+  background: linear-gradient(to right, #b48a56, #e6c67a);
+  transition: background-color 0.5s, color 0.5s;
+
+}
+/* ===== login container===== */
+
+
+.login-page {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 90%;
+  max-width: 850px;
+  padding: 30px;
+}
+
+/* =====logo && title (h)=====*/
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.card-header h2 {
+  font-size: 24px;
+  color: #8b6940;
+}
+
+.mini-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+/* ===== Column splitting=====*/
+.register-form {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-column {
+  flex: 1;
+  min-width: 250px;
+}
+/* ===== label =====*/
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+
+
+
+
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #e6c67a;
+  outline: none;
+  box-shadow: 0 0 5px rgba(230, 198, 122, 0.6);
+}
+
+/*===== Show/Hide password =====*/
+/*===== button Show/Hide password =====*/
+
+
+form input[type="password"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+  font-size: 14px;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box input[type="password"],
+.password-box input[type="text"] {
+  width: 100%;
+  padding: 10px 60px 10px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+
+  padding-right: 40px; 
+  padding-top:px;   
+
+}
+
+.show-btn {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  padding: 4px 12px;
+  font-size: 13px;
+  background-color: #8b6940;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 32px;
+  max-width: 15%;
+  min-width: 15%;
+  z-index: 2;
+
+
+}
+
+
+.show-btn:hover {
+  background: linear-gradient(to right, #b48a56, #e6c67a);
+
+}
+
+
+/*===== button Register =====*/
+
+
+form input[type="submit"] {
+  background-color: #8b6940;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+form input[type="submit"]:hover {
+  transition: background-color 0.5s, color 0.5s;
+
+  background: linear-gradient(to right, #b48a56, #e6c67a);
+}
+/*===== link =====*/
+
+form a {
+  color: #362205d0;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+form a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #362205d0;
+}
+
+/* Dark mode*/
+body.dark-mode .login-page {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .card-header h2,
+body.dark-mode form label {
+  color: #f2f2f2;
+}
+
+body.dark-mode form input[type="text"],
+body.dark-mode form input[type="email"],
+body.dark-mode form input[type="password"] {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 2px solid #555;
+}
+
+body.dark-mode form input[type="submit"] {
+  background-color: #bd9530;
+}
+
+body.dark-mode form input[type="submit"]:hover {
+  background: linear-gradient(to right, #836c49, #c2a86e);
+}
+
+body.dark-mode form a {
+  color: #bd9530;
+}
+
+body.dark-mode .show-btn {
+  background-color: #bd9530;
+}
+
+body.dark-mode .show-btn:hover {
+  background: linear-gradient(to right, #836c49, #c2a86e);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-form {
+    flex-direction: column;
+  }
+
+  .mini-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .register-form input,
+  .show-btn {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Two-Factor Authentication - DevHive</title>
+    <link rel="icon" href="/images/0b937b3954637851d57229986a4d6f50.jpg" />
+    <link rel="stylesheet" href="/css/tow-factor.css" />
+  </head>
+  <body>
+    <!-- == Button to activate simple mode == -->
+
+    <button id="toggleDarkMode" class="dark-toggle">Dark Mode🌙</button>
+
+    <div class="login-page">
+      <!-- == logo ==-->
+      <div class="login-left">
+        <img
+          src="/images/0b937b3954637851d57229986a4d6f50.jpg"
+          alt="DevHive Logo"
+          class="logo-img"
+        />
+      </div>
+
+      <div class="login-right">
+        <h2>Two-Factor Authentication</h2>
+
+        <p class="instruction">
+          Enter the 6-digit code sent to your email/phone:
+        </p>
+
+        <form id="codeForm">
+          <div class="code-box">
+            <input type="text" maxlength="1" class="code-input" required />
+            <input type="text" maxlength="1" class="code-input" required />
+            <input type="text" maxlength="1" class="code-input" required />
+            <input type="text" maxlength="1" class="code-input" required />
+            <input type="text" maxlength="1" class="code-input" required />
+            <input type="text" maxlength="1" class="code-input" required />
+          </div>
+
+          <!-- ==Confirm button == -->
+          <input type="submit" value="Confirm" />
+
+          <!-- ==counter == -->
+          <p class="resend">
+            Didn’t get the code?
+            <a href="#" class="resend-link"
+              >Resend in <span class="fake-count">30s</span></a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- == Activate Dark Mode == -->
+    <script>
+      document
+        .getElementById("toggleDarkMode")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("dark-mode");
+        });
+    </script>
+  </body>
+</html>

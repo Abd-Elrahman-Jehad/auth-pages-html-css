@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+/* ===== ==Home== ===== */
+  
+  body {
+    background: linear-gradient(to bottom right, #2f2f2f, #b5aa95);
+    color: #8b6940;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.6s, color 0.6s;
+  }
+  
+  /* ===== Dark mode ===== */
+  body.dark-mode {
+    background: #282525;
+    color: #f2f2f2;
+  }
+  
+  /* ===== Dark mode button===== */
+  .dark-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #8b6940;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1000;
+  }
+  .dark-toggle:hover {
+    background: linear-gradient(to right, #b48a56, #e6c67a);
+  }
+  
+  .login-page {
+    display: flex;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 90%;
+    max-width: 850px;
+  }
+  
+  /* ===== logo ===== */
+  .login-left {
+    flex: 1;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-img {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* ===== Contents===== */
+  .login-right {
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+  }
+  .login-right h2 {
+    margin-bottom: 15px;
+    color: #8b6940;
+  }
+  .instruction {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* ===== Code entry boxes ===== */
+  .code-box {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .code-input {
+    width: 40px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  .code-input:focus {
+    border-color: #8b6940;
+    outline: none;
+    box-shadow: 0 0 5px rgba(139, 105, 64, 0.4);
+  }
+  
+  /* ===== Confirm button ===== */
+  form input[type="submit"] {
+    background-color: #8b6940;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  form input[type="submit"]:hover {
+    background: linear-gradient(to right, #b48a56, #e6c67a);
+    transition: background-color 0.5s, color 0.5s;
+
+  }
+  
+  /* ===== link ===== */
+  .resend {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .resend-link {
+    text-decoration: none;
+    color: #8b6940;
+    font-weight: bold;
+  }
+  
+  /* ===== counter===== */
+  .fake-count {
+    display: inline-block;
+    animation: shrinkCount 1s infinite alternate;
+  }
+  @keyframes shrinkCount {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.6; }
+  }
+  
+  /* ===== Dark mode ===== */
+  body.dark-mode .login-page {
+    background-color: #1e1e1e;
+  }
+  body.dark-mode .login-right h2,
+  body.dark-mode .instruction,
+  body.dark-mode .resend {
+    color: #f2f2f2;
+  }
+  body.dark-mode .code-input {
+    background-color: #2a2a2a;
+    color: white;
+    border-color: #555;
+  }
+  body.dark-mode .code-input:focus {
+    border-color: #bd9530;
+  }
+  body.dark-mode form input[type="submit"] {
+    background-color: #bd9530;
+  }
+  body.dark-mode form input[type="submit"]:hover {
+    background: linear-gradient(to right, #836c49, #c2a86e);
+  }
+  body.dark-mode .resend-link {
+    color: #bd9530;
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .login-page {
+      flex-direction: column;
+    }
+    .logo-img {
+      max-width: 300px;
+      margin: 20px auto;
+    }
+    .code-box {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .resend-link {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  
