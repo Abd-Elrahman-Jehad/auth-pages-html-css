@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+/* ===== ==Home== ===== */
+body {
+  background: linear-gradient(to bottom right, #2f2f2f, #b5aa95);
+  color: #8b6940;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.6s, color 0.6s;
+}
+
+/* =====Dark mode ===== */
+body.dark-mode {
+  background: #282525;
+  color: #f2f2f2;
+}
+
+/* =====Dark mode button===== */
+.dark-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #8b6940;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+}
+.dark-toggle:hover {
+  background: linear-gradient(to right, #b48a56, #e6c67a);
+}
+
+.login-page {
+  display: flex;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 90%;
+  max-width: 850px;
+}
+
+/* ===== logo ===== */
+.login-left {
+  flex: 1;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-img {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+}
+
+/* =====form===== */
+.login-right {
+  flex: 1;
+  padding: 30px;
+}
+.login-right h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #8b6940;
+}
+
+/* =====label===== */
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+/* =====Show/Hide button container and password===== */
+.password-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* =====The field inside the box remains constant===== */
+.password-box input[type="password"],
+.password-box input[type="text"] {
+  width: 100%;
+  padding: 10px 60px 10px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+
+  padding-right: 40px; 
+ 
+
+}
+form input:focus {
+  border-color: #e6c67a;
+  outline: none;
+  box-shadow: 0 0 5px rgba(230, 198, 122, 0.6);
+}
+
+form input[type="password"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+  font-size: 14px;
+}
+
+
+/* ===== Show / Hide button ===== */
+.show-btn {
+  position: absolute;
+  top: 9%;
+  right: 8px;
+  padding: 4px 12px;
+  font-size: 13px;
+  background-color: #8b6940;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 32px;
+  max-width: 15%;
+  min-width: 15%;
+  z-index: 2;
+}
+
+
+.show-btn:hover {
+  background: linear-gradient(to right, #b48a56, #e6c67a);
+}
+
+/* =====  Green color when matching ===== */
+form input:valid {
+  border: 2px solid green;
+}
+
+/* =====  Red color when mismatched ===== */
+form input:invalid {
+  border: 2px solid red;
+}
+
+/* =====  Send button ===== */
+form input[type="submit"] {
+  background-color: #8b6940;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+form input[type="submit"]:hover {
+  background: linear-gradient(to right, #b48a56, #e6c67a);
+  transition: background-color 0.5s, color 0.5s;
+
+}
+
+/* ===== Back to Login button =====*/
+.back-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background-color: #eee;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #362205d0;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 13px;
+}
+.back-btn:hover {
+  background: #fdf1e6;
+  border-color: #8b6940;
+  color: white;
+  transition: background-color 0.5s, color 0.5s;
+  background: linear-gradient(to right, #b48a56, #e6c67a);
+  font-weight: bold;
+}
+
+/* ===== Dark mode elements ===== */
+
+ body.dark-mode .login-page {
+  background-color: #1e1e1e;
+}
+body.dark-mode .login-right h2,
+body.dark-mode form label {
+  color: #f2f2f2;
+}
+body.dark-mode form input[type="password"],
+body.dark-mode .password-box input {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 2px solid #555;
+}
+body.dark-mode form input[type="submit"] {
+  background-color: #bd9530;
+}
+body.dark-mode form input[type="submit"]:hover {
+  background: linear-gradient(to right, #836c49, #c2a86e);
+}
+body.dark-mode .back-btn {
+  background-color: #333;
+  color: #f2f2f2;
+}
+body.dark-mode .back-btn:hover {
+  /* background: #c2a86e;
+  border-color: #8b6940;
+  color: white; */
+  background: linear-gradient(to right, #836c49, #c2a86e);
+}
+body.dark-mode .show-btn {
+  background-color: #bd9530;
+}
+body.dark-mode .show-btn:hover {
+  background: linear-gradient(to right, #836c49, #c2a86e);
+} 
+
+/*===== Responsive on small screens=====*/
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+  }
+
+  .logo-img {
+    max-width: 300px;
+    margin: 50px auto;
+  }
+
+  .back-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .password-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .show-btn {
+    width: 100%;
+    margin-top: 0px;
+  }
+}
